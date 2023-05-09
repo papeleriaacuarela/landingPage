@@ -3,11 +3,19 @@
 require_once 'controllers/errores.php';
 class App{
         function __construct(){
-            echo "<p>Nueva app</p>";
+            //echo "<p>Nueva app</p>";
             // Capturar url
-            $url = $_GET['url'];
+            //Validar si esta vacia
+            $url = isset($_GET['url']) ? $_GET['url'] : null;
             $url = rtrim($url, '/'); //Quitar "/" este caracter si se encuentran varios seguidos o que no necesite
             $url = explode('/', $url); //Busca el caracter "/" y genera un arreglo con los parametros de la url
+
+            if(empty($url[0])){
+                $archivoController = 'controllers/main.php';
+                require_once $archivoController;
+                $controller = new Main;
+                return false;
+            }
 
             //var_dump($url);
             $archivoController = 'controllers/'.$url[0].'.php';

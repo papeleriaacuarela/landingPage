@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>vista de main</h1>   
+    <?php require 'views/header.php'?>
+
+        <h1 style="color:green;">Vista de Main</h1> 
+
+    <?php require 'views/footer.php'?>
 </body>
 </html>
