@@ -1,5 +1,7 @@
 <?php
-    class App{
+
+require_once 'controllers/errores.php';
+class App{
         function __construct(){
             echo "<p>Nueva app</p>";
             // Capturar url
@@ -20,7 +22,7 @@
                 }
             
             }else{
-                $controller = new Error();
+                 $controller = new Errores();
             }
         }
     }

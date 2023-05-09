@@ -1,9 +1,9 @@
 <?php
     class View{
 
-        function __construct(){
-            echo "<p>view base</p>";
-        }
+        // function __construct(){
+        //     echo "<p>Vista base</p>";
+        // }
 
         function render($nombre){
             require 'views/'.$nombre.'.php'; 
