@@ -8,8 +8,10 @@
 </head>
 <body>
     <?php require 'views/header.php'?>
-
-        <h1 style="color:green;">Vista de Main</h1> 
+        
+        <div id="main">
+            <h1 class="center" style="color:green;">Vista de Main</h1> 
+        </div>
 
     <?php require 'views/footer.php'?>
 </body>

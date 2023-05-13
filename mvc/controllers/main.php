@@ -6,6 +6,8 @@
             $this->view->render('main/index');
             //echo "<p>Nuevo controlador Main</p>";
         }
+
+        //METODOS DE LA VISTA ACTUAL
         function saludo(){
             echo "<p>Ola</p>";
         }

@@ -10,6 +10,7 @@ class App{
             $url = rtrim($url, '/'); //Quitar "/" este caracter si se encuentran varios seguidos o que no necesite
             $url = explode('/', $url); //Busca el caracter "/" y genera un arreglo con los parametros de la url
 
+            //validar que no este vacia la url, ye ser ai reirigir al index
             if(empty($url[0])){
                 $archivoController = 'controllers/main.php';
                 require_once $archivoController;
@@ -29,9 +30,9 @@ class App{
                     $controller->{$url[1]}();
                 }
             
-            }else{
-                 $controller = new Errores();
-            }
+                }else{
+                    $controller = new Errores();
+                }
         }
     }
 ?>
